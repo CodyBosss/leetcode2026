@@ -4,7 +4,7 @@ public class IndexOfTarget {
 
 	public static void main(String[] args) {
 		int num[] = { 1, 3, 5, 6 };
-		int target = 7;
+		int target = 2;
 		System.out.println(searchIndex(num, target));
 	}
 

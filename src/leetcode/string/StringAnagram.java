@@ -13,15 +13,15 @@ public class StringAnagram {
 		System.out.println(anagram(str));
 	}
 	public static List<List<String>> anagram(String [] str){
-		Map<String, List<String>> map = new HashMap<>();
+		Map<String, List<String>> mp = new HashMap<>();
 		for(String s : str) {
 			char [] c = s.toCharArray();
 			Arrays.sort(c);
-			String key = new String(c);
+			String k = new String(c);
 			
-			map.computeIfAbsent(key, k-> new ArrayList<>()).add(s);
-		}
-		return new ArrayList<>(map.values());
+			mp.computeIfAbsent(k, i-> new ArrayList<>()).add(s);
+		}		
+		return new ArrayList<>(mp.values());
 	}
 
 }

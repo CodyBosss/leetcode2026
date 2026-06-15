@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class RotateArray {
 	
 	public static void main(String [] args) {
-		int nums [] = {-1,-100,2,99};
+		int nums [] = {-1,-100,2,99}; 
 		int k = 2;
 		rotate(nums, k);
 		System.out.println(Arrays.toString(nums));
