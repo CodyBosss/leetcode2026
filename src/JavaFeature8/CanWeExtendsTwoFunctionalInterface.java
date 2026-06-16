@@ -21,7 +21,10 @@ interface B extends A {
 //	}}
 
 //using lambda expression
-public class CanWeExtendsTwoFunctionalInterface {
+public class CanWeExtendsTwoFunctionalInterface implements B {
+	public void print() {
+		System.out.println("print method");
+	}
 	public static void main(String[] args) {
 		B b = () -> System.out.println("print method");
 		b.print();

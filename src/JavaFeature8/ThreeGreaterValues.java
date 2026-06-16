@@ -1,9 +1,8 @@
 package JavaFeature8;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 public class ThreeGreaterValues {
 	
@@ -36,7 +35,7 @@ public class ThreeGreaterValues {
 		emp.add(new ThreeGreaterValues(5,"Rahul",30000));
 		
 		//for finding thr three greater values;
-		List<ThreeGreaterValues> fthreesal = emp.stream().sorted((e1,e2)->e2.getSalary()-e1.getSalary())
+		List<ThreeGreaterValues> fthreesal = emp.stream().sorted(Comparator.comparing(ThreeGreaterValues::getSalary))
 				.limit(3).toList();
 		System.out.println(fthreesal);
 		

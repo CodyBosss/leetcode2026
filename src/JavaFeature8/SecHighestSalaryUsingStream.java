@@ -1,6 +1,7 @@
 package JavaFeature8;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -33,11 +34,19 @@ public class SecHighestSalaryUsingStream {
 		List<SecHighestSalaryUsingStream> emp = Arrays.asList(new SecHighestSalaryUsingStream(1, "Sudhir", 50000),
 				new SecHighestSalaryUsingStream(2, "Rahul", 70000), new SecHighestSalaryUsingStream(3, "Amit", 40000),
 				new SecHighestSalaryUsingStream(4, "Neha", 60000));
-
+		
+		//Using this approach we can get id, name and salary.
 		SecHighestSalaryUsingStream secHigest = emp.stream()
-				.sorted(Comparator.comparing(SecHighestSalaryUsingStream::getSalary).reversed()).skip(1).findFirst()
+				.sorted(Comparator.comparing(SecHighestSalaryUsingStream::getSalary)
+				.reversed()).skip(1)
+				.findFirst()
 				.orElse(null);
 		System.out.println(secHigest);
+		
+		//Using this approach we can get only salary.
+//		double res = emp.stream().map(SecHighestSalaryUsingStream::getSalary)
+//				.distinct().sorted(Collections.reverseOrder()).skip(1).findFirst().orElse(null);
+//		System.out.println(res);
 
 	}
 

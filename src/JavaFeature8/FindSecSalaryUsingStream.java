@@ -11,6 +11,12 @@ public class FindSecSalaryUsingStream {
 		Integer list = sal.stream().sorted(Collections.reverseOrder())
 				.skip(2).findFirst().orElse(null);
 		System.out.println(list);
+		
+		//for emp class
+//		double res = list.stream().map(Test::getSal).distinct()
+//				.sorted(Collections.reverseOrder()).skip(2).findFirst()
+//				.orElse(null);
+		
  	}
 
 }
